@@ -29,7 +29,7 @@ MH-Z19B has three different outputs: UART, analog output and PWM output. We use 
 This IC made by Silicon Labs is an exceptional dual temperature-humidity sensor that can be operated via I2C. There are lots of Arduino libraries for this sensor, which is also available in the form of breakout boards so that there is no need to do any surface soldering. These boards are available on eBay and Aliexpress for less than 4 EUR.
 
 <p align="center">
-<img width="300" src="https://cdn.sparkfun.com//assets/parts/1/1/3/0/8/13763-01a.jpg">
+<img width="250" src="https://cdn.sparkfun.com//assets/parts/1/1/3/0/8/13763-01a.jpg">
 </p>
 
 The code provided in this project relies on [Sparkfun’s library for the SI7021 IC](https://github.com/sparkfun/SparkFun_Si701_Breakout_Arduino_Library) so we encourage you to source the breakout board from them.
@@ -49,7 +49,13 @@ respira-indoor/myemail@mydomain.org/XXXXXXXXXXXX/network
 
 MQTT message:
 ```
-{"owner":"myemail@mydomain.org","device":"XXXXXXXXXXXX","temperature":23.56,"humidity":48.31,"co2":1018}
+{
+  "owner": "myemail@mydomain.org",
+  "device": "XXXXXXXXXXXX",
+  "temperature": 23.56,
+  "humidity": 48.31,
+  "co2": 1018
+}
 ```
 Where “owner” is the e-mail address used to register your device and “device” is the MAC address of your device.
 
@@ -92,13 +98,13 @@ Connect your cell phone to the WiFi network named respira-indoor_XXXXXXXXXXXX, b
 Go to http://192.168.4.1 from your cell phone browser and click on “Configure WiFi”.
 
 <p align="center">
-<img width="300" src="http://panstamp.org/pictures/respira-indoor_wifimanager_01.jpg">
+<img src="http://panstamp.org/pictures/respira-indoor_wifimanager_01.jpg">
 </p>
 
 Then enter the SSID and WiFi password of the WiFi network you want the RESPIRA indoor device to connect to.
 
 <p align="center">
-<img width="300" src="http://panstamp.org/pictures/respira-indoor_wifimanager_02.jpg">
+<img src="http://panstamp.org/pictures/respira-indoor_wifimanager_02.jpg">
 </p>
 
 Also enter your e-mail address. This address will be used by R! To send you an e-mail with the link to your dashboard and also to verify that you are not a bot :-). After this verification you will be able to open the dashboard for the device.

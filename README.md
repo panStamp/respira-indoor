@@ -19,7 +19,7 @@ RESPIRA indoor relies on three measurements: CO2 level, relative humidity and te
 This sensor, made by Winsen, is very popular and provides a good quality-price ratio. MH-Z19B can be found in two versions: one with 0-2000ppm range and other for 0-5000ppm. The second version is the most commonly found on eBay and Aliexpress and thus, this is the version used by the RESPIRA indoor code by default. You can however set the 2000ppm range in the code as shown later in this document.
 
 <p align="center">
-<img src="https://www.winsen-sensor.com/d/propic/MH-Z19B.jpg">
+<img width="300" src="https://www.winsen-sensor.com/d/propic/MH-Z19B.jpg">
 </p>
 
 MH-Z19B has three different outputs: UART, analog output and PWM output. We use the PWM output in this project since we want to keep the ESP8266 UART for debugging purposes.

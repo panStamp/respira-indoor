@@ -2,6 +2,10 @@
 
 RESPIRA indoor is an open device made to monitor air quality and ventilation in indoor spaces. This project is an evolution of panStamp's RESPIRA project but focusing only on indoor air quality. RESPIRA indoor is designed to run on cheap ESP8266 boards and connect to iNubo's free RESPIRA platform via MQTT over WiFi. The whole project, firmware and software, is maintained by [panStamp](https://panstamp.com) and [iNubo](http://inubo.es/). The community is invited to build their own RESPIRA indoor devices and deploy them in working and living spaces where people stay most of their time.
 
+<p align="center">
+<img width="500" src="http://panstamp.org/pictures/r_co2_01_s.jpg">
+</p>
+
 ## COVID-19 and ventilation
 
 Health authorities claim the need to maintain proper ventilation of indoor spaces in order to minimize the risk of transmission of COVID-19. Ventilated spaces generally contain lower concentrations of volatile organic compounds, including viruses and bacteria. Thus, keeping working and living spaces ventilated might significantly reduce the risk of contagion through the air.
@@ -108,7 +112,7 @@ After assembling and programming the device, power it from a 5VDC power supply. 
 <img src="http://panstamp.org/pictures/respira-indoor_wifimanager_02.jpg">
 </p>
 
-Also enter your e-mail address. This address will be used by R! To send you an e-mail with the link to your dashboard and also to verify that you are not a bot :-). After this verification you will be able to open the dashboard for the device.
+Also enter your e-mail address. This address will be used by R! To send you an e-mail with the link to your dashboard and also to verify that you are not a bot :-). At this point, you will also be allowed to name your device. After this verification you will be able to open the dashboard for the device.
 
 4. Save your settings and let your RESPIRA indoor device connect to the network. The first readings will be transmitted 5 minutes after this connection.
 

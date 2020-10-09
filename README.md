@@ -42,6 +42,10 @@ The code provided in this project relies on [Sparkfun’s library for the SI7021
 
 [iNubo](http://inubo.es/) developed and deployed [R!](https://respira-indoor.inubo.es/), a web-based platform that collects and registers temperature, humidity and CO2 readings via MQTT. R! was created exclusively for RESPIRA indoor and can be used free of cost.
 
+<p align="center">
+<img src="http://panstamp.org/pictures/r_web_01.jpg">
+</p>
+
 ## How it works
 
 RESPIRA indoor takes CO2 samples every 10 seconds. Once every 5 minutes these samples are processed by eliminating the minimum and maximum values and calculating the mean with the rest of values. This mean is then transmitted (every 5 minutes) along with the temperature and humidity by means of a MQTT publication. This is an example of MQTT packet transmitted:

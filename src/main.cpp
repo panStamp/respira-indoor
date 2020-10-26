@@ -98,6 +98,7 @@ void restart(void)
 void saveConfigCallback ()
 {
   cfg.saveEmail(emailField.getValue());
+  restart();
 }
 
 /**
@@ -111,8 +112,13 @@ void mqttReceived(char *topic, char *payload)
   Serial.print("MQTT command received: "); Serial.println(payload);
 
   // Process command
-  if (!strcasecmp(payload, "restart"))    
+  if (!strcasecmp(payload, "restart"))
     restart();
+  if (!strcasecmp(payload, "factory-reset"))
+  {
+    wifiManager.resetSettings();
+    restart();
+  }
 }
 
 /**
@@ -247,9 +253,9 @@ void setup()
   
   digitalWrite(LED, LOW);
   
+  //wifiManager.resetSettings();
   // WiFi Manager timeout
   wifiManager.setConfigPortalTimeout(300);
-  //wifiManager.resetSettings();
 
   // WiFi manager custom e-mail field
   wifiManager.addParameter(&emailField);
@@ -261,7 +267,7 @@ void setup()
   if (!wifiManager.autoConnect(deviceId))
   {
     Serial.println("failed to connect and hit timeout");
-    ESP.restart();
+    restart();
     delay(1000);
   }
   else
